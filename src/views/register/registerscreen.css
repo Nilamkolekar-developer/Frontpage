@@ -1,0 +1,201 @@
+/* Register Page Layout */
+.register-page {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Left-side image section */
+.left-side {
+  flex: 1;
+  position: relative;
+}
+
+.graphic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right-side form container */
+.right-side {
+  flex: 1;
+  background-image: url("src/assets/images/register/rightimg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Container for the register section */
+.register-container {
+  max-width: 500px;
+  width: 100%;
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #000; /* Ensure all text within this container is black */
+}
+
+.logo-section {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  max-width: 200px;
+}
+
+/* Form title */
+h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #000; /* Black text color */
+}
+
+/* Form input group */
+.form-group1,
+.form-group {
+  margin-bottom: 0.5rem;
+}
+
+label {
+  display: block;
+  font-size: 0.875rem;
+  color: #000; /* Black text color for labels */
+  margin-bottom: 0.5rem;
+}
+
+/* Text inputs */
+input {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: white;
+  color: #000; /* Black text color for input fields */
+  box-sizing: border-box;
+  outline: none;
+  height: 40px;
+}
+
+/* Focus styles */
+input:focus {
+  border-color: #050505;
+  background-color: #fff;
+}
+
+/* Password field wrapper */
+.password-wrapper,
+.confirmpassword-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Style for password input field */
+.password-wrapper input,
+.confirmpassword-wrapper input {
+  width: 100%;
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000; /* Black text color */
+  box-sizing: border-box;
+  outline: none;
+  height: 40px;
+  padding-right: 35px; /* Space for the icon */
+}
+
+/* Style for eye icon */
+.password-toggle-icon,
+.confirmpassword-toggle-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #17a2b8;
+  font-size: 1.2rem;
+}
+
+/* Focus styles for password fields */
+.password-wrapper input:focus,
+.confirmpassword-wrapper input:focus {
+  border-color: #17a2b8;
+}
+
+/* Submit button */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #17a2b8;
+  color: #000; /* Black text color for button text */
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #138496;
+}
+
+/* Login link */
+.login-text {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #000; /* Black text color */
+}
+
+.login-text span {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-text span:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .register-page {
+    flex-direction: column;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+    height: auto;
+  }
+
+  .register-container {
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+  .error-text {
+    color: red;
+    font-size: 0.875rem; /* Optional: Adjust font size as desired */
+    margin-top: 0.25rem; /* Optional: Adds space between input and error */
+  }
+  
+
+  .form-group1,
+  .form-group {
+    margin-bottom: 0.5rem;
+  }
+}
